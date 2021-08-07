@@ -1,0 +1,33 @@
+{
+  "ok": "Ok",
+  "and": "and",
+  "server-error": "Oops! Something went wrong!",
+
+  "not-found": "Not found data",
+
+  "forbidden": "Failed, Forbidden access",
+  "unauthorized": "Failed, Unauthorized",
+  "no-token": "Failed, No token provided",
+
+  "wrong-OTP": "wrong Password (OTP)",
+
+  "user-not-found": "User not found",
+  "wrong-credentials": "wrong credentials",
+
+  "required-password": "A password is required",
+  "invalid-password": "The password must contain at least 8 characters, 1 number, 1 lower case character, 1 upper case character",
+
+  "used-email": "This email is already exists",
+  "invalid-email": "Invalid email",
+  "required-email": "The email is required",
+
+  "required-website-domains": "The monitor must have a website or domain consisting of address and port",
+  "required-method": "The method is required",
+  "required-status-code": "The status code is required",
+  "required-name-tag": "The name tag is required",
+
+  "incorrect-webhook": "The webhook must be a valid URL",
+
+  "exist-monitor": "The monitor is already exists",
+  "already-paused-resumed": "The monitor is already paused/resumed"
+}

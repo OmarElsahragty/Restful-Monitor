@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  pgdb:
+    image: "postgres:13"
+    restart: always
+    container_name: monitor_postgres
+    volumes:
+      - monitor_pgdata:/var/lib/postgresql/data
+    env_file:
+      - .postgres
+
+  redis:
+    image: redis:6.2.3-alpine
+    restart: always
+    container_name: monitor_redis
+    volumes:
+      - monitor_redis_data:/data:rw
+
+  backend:
+    build:
+      context: .
+    container_name: monitor_backend
+    ports:
+      - 5000:5000
+    depends_on:
+      - pgdb
+      - redis
+    env_file:
+      - .env
+
+volumes:
+  monitor_pgdata:
+    driver: local
+    name: monitor_pgdata
+
+  monitor_redis_data:
+    driver: local
+    name: poll_system_redis_data

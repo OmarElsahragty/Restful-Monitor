@@ -1,0 +1,570 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: Restful Monitor
+  contact: {}
+host: example.com
+basePath: /
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /login:
+    post:
+      summary: login
+      tags:
+        - users
+      operationId: login
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: Body
+          in: body
+          required: true
+          description: ""
+          schema:
+            $ref: "#/definitions/loginrequest"
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /registration:
+    post:
+      summary: registration
+      tags:
+        - users
+      operationId: registration
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: Body
+          in: body
+          required: true
+          description: ""
+          schema:
+            $ref: "#/definitions/registrationrequest"
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /password:
+    put:
+      summary: change-password
+      tags:
+        - users
+      operationId: change-password
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: Body
+          in: body
+          required: true
+          description: ""
+          schema:
+            $ref: "#/definitions/change-password-request"
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /monitor:
+    post:
+      summary: monitor
+      tags:
+        - monitors
+      operationId: monitor
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: Body
+          in: body
+          required: true
+          description: ""
+          schema:
+            $ref: "#/definitions/monitorrequest"
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /monitor/sahragty-google:
+    put:
+      summary: monitor1
+      tags:
+        - monitors
+      operationId: monitor1
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: Body
+          in: body
+          required: true
+          description: ""
+          schema:
+            $ref: "#/definitions/monitorrequest1"
+      responses:
+        "200":
+          description: ""
+          headers: {}
+    get:
+      summary: monitor
+      tags:
+        - monitors
+      operationId: Getmonitor
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+    delete:
+      summary: monitor1
+      tags:
+        - monitors
+      operationId: Deletemonitor1
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /monitors:
+    get:
+      summary: monitors
+      tags:
+        - monitors
+      operationId: monitors
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: tag
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+    delete:
+      summary: monitors1
+      tags:
+        - monitors
+      operationId: monitors1
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: tag
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /pauseMonitor/sahragty-google:
+    patch:
+      summary: pause-monitor
+      tags:
+        - monitors
+      operationId: pause-monitor
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /pauseMonitors:
+    patch:
+      summary: pause-monitors
+      tags:
+        - monitors
+      operationId: pause-monitors
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: tag
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /resumeMonitor/sahragty-google:
+    patch:
+      summary: resume-monitor
+      tags:
+        - monitors
+      operationId: resume-monitor
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /resumeMonitors:
+    patch:
+      summary: resume-monitors
+      tags:
+        - monitors
+      operationId: resume-monitors
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: tag
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: authentication
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+definitions:
+  loginrequest:
+    title: loginrequest
+    example:
+      email: omar_elsahragty@hotmail.com
+      password: Password123
+    type: object
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    required:
+      - email
+      - password
+  registrationrequest:
+    title: registrationrequest
+    example:
+      email: omar.alsahragty@gmail.com
+    type: object
+    properties:
+      email:
+        type: string
+    required:
+      - email
+  change-password-request:
+    title: change-password-request
+    example:
+      oldPassword: Password123
+      newPassword: Password000
+    type: object
+    properties:
+      oldPassword:
+        type: string
+      newPassword:
+        type: string
+    required:
+      - oldPassword
+      - newPassword
+  monitorrequest:
+    title: monitorrequest
+    example:
+      nameTag: sahragty
+      monitors:
+        - website: "https://www.google.com/"
+          address: null
+          port: null
+          method: get
+          path: /
+          query: null
+          body: null
+          headers: null
+          ignoreSSL: false
+          generateId: false
+          interval: 10
+          intervalUnits: seconds
+          assert:
+            statusCode: 200
+          webhook: null
+        - website: "https://www.linkedin.com/"
+          address: null
+          port: null
+          method: get
+          path: /
+          query: null
+          body: null
+          headers: null
+          ignoreSSL: false
+          generateId: false
+          interval: 10
+          intervalUnits: seconds
+          assert:
+            statusCode: 200
+          webhook: null
+    type: object
+    properties:
+      nameTag:
+        type: string
+      monitors:
+        type: array
+        items:
+          $ref: "#/definitions/Monitor"
+    required:
+      - nameTag
+      - monitors
+  Monitor:
+    title: Monitor
+    example:
+      website: "https://www.google.com/"
+      address: null
+      port: null
+      method: get
+      path: /
+      query: null
+      body: null
+      headers: null
+      ignoreSSL: false
+      generateId: false
+      interval: 10
+      intervalUnits: seconds
+      assert:
+        statusCode: 200
+      webhook: null
+    type: object
+    properties:
+      website:
+        type: string
+      address:
+        type: string
+      port:
+        type: string
+      method:
+        type: string
+      path:
+        type: string
+      query:
+        type: string
+      body:
+        type: string
+      headers:
+        type: string
+      ignoreSSL:
+        type: boolean
+      generateId:
+        type: boolean
+      interval:
+        type: integer
+        format: int32
+      intervalUnits:
+        type: string
+      assert:
+        $ref: "#/definitions/Assert"
+      webhook:
+        type: string
+    required:
+      - website
+      - address
+      - port
+      - method
+  Assert:
+    title: Assert
+    example:
+      statusCode: 200
+    type: object
+    properties:
+      statusCode:
+        type: integer
+        format: int32
+    required:
+      - statusCode
+  monitorrequest1:
+    title: monitorrequest1
+    example:
+      website: "https://github.com/"
+      address: null
+      port: null
+      method: get
+      path: /
+      query: null
+      body: null
+      headers: null
+      ignoreSSL: false
+      generateId: false
+      interval: 10
+      intervalUnits: seconds
+      assert:
+        statusCode: 200
+      webhook: null
+    type: object
+    properties:
+      website:
+        type: string
+      address:
+        type: string
+      port:
+        type: string
+      method:
+        type: string
+      path:
+        type: string
+      query:
+        type: string
+      body:
+        type: string
+      headers:
+        type: string
+      ignoreSSL:
+        type: boolean
+      generateId:
+        type: boolean
+      interval:
+        type: integer
+        format: int32
+      intervalUnits:
+        type: string
+      assert:
+        $ref: "#/definitions/Assert"
+      webhook:
+        type: string
+    required:
+      - website
+      - address
+      - port
+      - method
+tags:
+  - name: users
+  - name: monitors
