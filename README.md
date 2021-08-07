@@ -1,6 +1,6 @@
 # Restful Monitor
 
-![Logo](APP_LOGO=https://i.ibb.co/ykhz8Q7/logo.png)
+![Logo](https://i.ibb.co/ykhz8Q7/logo.png)
 
 uptime monitoring RESTful API server which allows authorized users to enter URLs they want monitored, and get detailed uptime reports about their availability, average response time, and total uptime/downtime.
 
