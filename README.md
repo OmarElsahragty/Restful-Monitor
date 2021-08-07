@@ -25,13 +25,6 @@ uptime monitoring RESTful API server which allows authorized users to enter URLs
   </tr>
 </table>
 
-<table border="0">
- <tr>
-    <td>Lorem ipsum ...</td>
-    <td>Lorem ipsum ...</td>
- </tr>
-</table>
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
