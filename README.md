@@ -11,15 +11,15 @@ uptime monitoring RESTful API server which allows authorized users to enter URLs
     <td>
       <img
         src="https://i.ibb.co/PW6XGtm/registration.png"
-        height="485px"
-        width="485px"
+        height="500px"
+        width="500px"
       />
     </td>
     <td>
       <img
         src="https://i.ibb.co/FhBzTD7/status.png"
-        height="485px"
-        width="485px"
+        height="500px"
+        width="500px"
       />
     </td>
   </tr>
