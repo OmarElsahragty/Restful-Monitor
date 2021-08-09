@@ -56,7 +56,7 @@ A step by step guide that will tell you how to get the development environment u
 
 ### Postman Collection
 
-URL ➡ `https://www.getpostman.com/collections/9e70943f6f2f3ca038e4`
+URL ➡ `https://www.getpostman.com/collections/bb845025967b49747229`
 
 ### Swagger Documentation
 
