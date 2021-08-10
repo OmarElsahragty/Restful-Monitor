@@ -4,8 +4,6 @@
 
 uptime monitoring RESTful API server which allows authorized users to enter URLs they want monitored, and get detailed uptime reports about their availability, average response time, and total uptime/downtime.
 
-##### Demo Base URL ➡ `34.74.88.81/Restful-Monitor`
-
 <table border="0">
   <tr>
     <td>
