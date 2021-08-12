@@ -37,29 +37,24 @@ Run ➡ `docker-compose up --build -d`
 
 ### Installation
 
-A step by step guide that will tell you how to get the development environment up and running.
-
-1. Install node dependencies ➡ `npm install`
-2. Database Initialization ➡ `npm run init`
-3. Development run ➡ `npm run dev` || Production run ➡ `npm start`
+Run ➡ `npm install`
 
 ### NPM scripts
 
 1. `npm run docker` ➡ Docker runtime environment
-2. `npm runt start` ➡ Production runtime environment
+2. `npm run start` ➡ Production runtime environment
 3. `npm run dev` ➡ Development runtime environment (Listening on src for changes )
-4. `npm runt init` ➡ Database Initialization (Create all the tables)
-5. `npm runt rest` ➡ Database Rest (Dropping all the tables and recreate them)
-6. `npm runt lint` ➡ Run linter (Check for mistakes)
+4. `npm run init` ➡ Database Initialization (Create all the tables)
+5. `npm run rest` ➡ Database Rest (Dropping all the tables and recreate them)
+6. `npm run lint` ➡ Run linter (Checking for mistakes)
 
-### Postman Collection
+### Documentation
 
-URL ➡ `https://www.getpostman.com/collections/bb845025967b49747229`
+1. Postman (collection URL) is provided in ./docs/Postman Collection.txt file
+2. Swagger (yaml and json files) are provided in ./docs/Swagger folder
 
-### Swagger Documentation
-
-Check ➡ `./docs/swagger`
-
-### User Management
+#### User Management
 
 After calling registration end point successfully, you should receive a email with your account password from the email address that you have added to the environment file `.env` to make sure that each email registered is valid.
+
+For more projects check my github account `https://github.com/OmarElsahragty` or my portfolio website `https://sahragty.herokuapp.com/`
